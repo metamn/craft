@@ -19,7 +19,11 @@
   </head>
   
   <body>
-    OK
+    <ul>
+      {% for entry in craft.entries.section('components').find() %}
+        <li>{{ entry.title }}</li>
+      {% endfor %}
+    </ul>
   </body>
 
 </html>
